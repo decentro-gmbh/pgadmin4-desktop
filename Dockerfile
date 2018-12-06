@@ -7,5 +7,9 @@
 FROM dpage/pgadmin4:3.6
 LABEL maintainer="Benjamin Assadsolimani <info@decentro.de>"
 
-# Copy over configuration
+# Copy over local configuration file
 COPY config_local.py /pgadmin4/config_local.py
+
+# Copy over default pgadmin configuration database
+VOLUME /var/lib/pgadmin/
+COPY pgadmin4.db /var/lib/pgadmin/pgadmin4.db
