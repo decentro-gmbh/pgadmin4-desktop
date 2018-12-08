@@ -11,5 +11,5 @@ LABEL maintainer="Benjamin Assadsolimani <info@decentro.de>"
 COPY config_local.py /pgadmin4/config_local.py
 
 # Copy over default pgadmin configuration database
-VOLUME /var/lib/pgadmin/
 COPY pgadmin4.db /var/lib/pgadmin/pgadmin4.db
+VOLUME /var/lib/pgadmin/
